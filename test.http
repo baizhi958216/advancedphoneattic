@@ -1,0 +1,15 @@
+@url  = http://localhost:8000
+@ContentType= application/json
+
+# addDevice
+# POST {{url}}/
+# content-type: {{ContentType}}
+
+# {
+#     "name":"Hendry",
+#     "salary":"61888",
+#     "age":"26"
+# }
+
+# 
+GET {{url}} HTTP/1.1
