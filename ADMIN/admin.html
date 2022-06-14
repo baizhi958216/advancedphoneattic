@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body>
+    <script src="http://localhost:8000/public/javascript/axios.min.js"></script>
+    <div id="app">
+      <div class="banner">
+        <div class="wanjige">玩机阁</div>
+        <div class="user">
+          <div class="username"></div>
+          <div class="exit">退出</div>
+        </div>
+      </div>
+
+      <!-- switch -->
+      <div class="selectfun">
+        <div class="users">用户管理</div>
+        <div class="devices">机型管理</div>
+        <div class="bbs">论坛管理</div>
+      </div>
+
+      <!-- panel -->
+      <div class="managepanel">
+        <div class="panelheader">用户管理</div>
+        <div class="panelitems"></div>
+        <div class="add">+</div>
+      </div>
+
+      <!-- window -->
+      <div class="modifywindow"></div>
+
+      <!-- shadow -->
+      <div class="shadow"></div>
+    </div>
+
+    <script src="./javascript/templates.js"></script>
+    <script src="./javascript/admin.js"></script>
+    <script src="./javascript/eventstrack.js"></script>
+  </body>
+</html>
