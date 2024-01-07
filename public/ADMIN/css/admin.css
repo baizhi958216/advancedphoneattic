@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+#app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://api.ixiaowai.cn/mcapi/mcapi.php);
+  background-size: 100%;
+  background-position: top;
+  z-index: -10;
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw;
+  min-height: 50px;
+  align-items: center;
+  border-bottom: 1px solid rgba(163, 163, 163, 0.329);
+  position: fixed;
+  width: 90vw;
+  z-index: 99;
+  background-color: white;
+}
+.banner .wanjige {
+  font-size: 25px;
+}
+.banner .user {
+  display: flex;
+  /* width: 10vw; */
+  justify-content: space-around;
+}
+.banner .user div {
+  cursor: pointer;
+  margin-right: 1em;
+}
+.selectfun {
+  position: relative;
+  top: 15rem;
+  left: 10rem;
+  width: 10rem;
+}
+.selectfun .users,
+.selectfun .devices,
+.selectfun .bbs {
+  height: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+  transform: rotate(-30deg);
+  transition: all linear 0.3s;
+}
+.selectfun .users:hover,
+.selectfun .devices:hover,
+.selectfun .bbs:hover {
+  border-radius: 35px;
+  cursor: pointer;
+}
+.selectfun .users {
+  background-color: rgba(177, 250, 43, 0.295);
+}
+.selectfun .devices {
+  background-color: rgba(250, 143, 43, 0.295);
+}
+.selectfun .bbs {
+  background-color: rgba(250, 43, 43, 0.295);
+}
+.selectfun .users:hover {
+  box-shadow: 10px 10px 30px rgba(177, 250, 43, 0.726);
+}
+.selectfun .devices:hover {
+  box-shadow: 10px 10px 30px rgba(250, 143, 43, 0.295);
+}
+.selectfun .bbs:hover {
+  box-shadow: 10px 10px 30px rgba(250, 43, 43, 0.295);
+}
+.managepanel {
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 5rem;
+  left: 30rem;
+  width: 60vw;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.918);
+  box-shadow: 0 0 30px rgb(146, 145, 145);
+}
+.managepanel ::-webkit-scrollbar {
+  display: none;
+}
+.managepanel .panelheader {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  padding-left: 3rem;
+}
+.managepanel .panelitems {
+  padding-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  overflow-y: scroll;
+}
+.managepanel .panelitems .item {
+  background-color: white;
+  box-shadow: 0 0 10px 10px rgba(117, 117, 117, 0.185);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 80%;
+  height: 3rem;
+  font-size: 1.8rem;
+}
+.managepanel .panelitems .item .item-name {
+  width: 35vw;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.managepanel .panelitems .item .modify,
+.managepanel .panelitems .item .delete {
+  width: 32px;
+  height: 32px;
+  background-image: url("http://localhost:8000/public/icons8-modify-58.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  cursor: pointer;
+}
+.managepanel .panelitems .item .delete {
+  background-image: url("http://localhost:8000/public/icons8-delete-database-40.png");
+}
+.managepanel .add {
+  background-color: rgba(76, 250, 154, 0.336);
+  height: 5rem;
+  font-size: 5rem;
+  font-weight: 700;
+  width: 5rem;
+  color: rgb(18, 247, 68);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "";
+  border-radius: 50%;
+  left: 95%;
+  position: relative;
+  transform: translateX(-95%);
+  cursor: pointer;
+}
+.modifywindow {
+  position: absolute;
+  display: none;
+  width: 20rem;
+  z-index: 9;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  padding-bottom: 1.5rem;
+}
+.mag-username,
+.mag-userpsw,
+.mag-usergroup,
+.mag-topic,
+.mag-content,
+.mag-reply,
+.mag-read,
+.mag-postDate {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mag-username div,
+.mag-userpsw div,
+.mag-usergroup div,
+.mag-topic div,
+.mag-content div,
+.mag-reply div,
+.mag-read div,
+.mag-postDate div {
+  font-size: 2rem;
+}
+.mag-username input,
+.mag-userpsw input,
+.mag-usergroup input,
+.mag-topic input,
+.mag-content input,
+.mag-reply input,
+.mag-read input,
+.mag-postDate input {
+  height: 2rem;
+  width: 15rem;
+  margin-left: 10px;
+  padding-left: 5px;
+  outline: none;
+  margin-top: 10px;
+  box-shadow: 0 0 20px rgb(196, 196, 196);
+  border-radius: 10px;
+}
+.mag-submit {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.shadow {
+  display: none;
+  background-color: rgba(109, 109, 109, 0.664);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8;
+}

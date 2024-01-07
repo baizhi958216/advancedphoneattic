@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+#app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://api.ixiaowai.cn/mcapi/mcapi.php);
+  background-size: 100%;
+  background-position: 0 10rem;
+  z-index: -10;
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw;
+  min-height: 50px;
+  align-items: center;
+  border-bottom: 1px solid rgba(163, 163, 163, 0.329);
+  position: fixed;
+  width: 90vw;
+  z-index: 99;
+  background-color: white;
+}
+.banner .wanjige {
+  font-size: 25px;
+}
+.banner .user {
+  display: flex;
+  /* width: 10vw; */
+  justify-content: space-around;
+}
+.banner .user div {
+  cursor: pointer;
+  margin-right: 1em;
+}
+.devbanner {
+  height: 10rem;
+  background-color: rgb(255, 148, 47);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5rem;
+  padding-top: 2rem;
+}
+.devbanner div:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.devbanner div:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+.toptic {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  flex-direction: column;
+}
+.toptic .bar {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  box-shadow: 0 0 10px 1px rgba(138, 138, 138, 0.185);
+  color: rgba(138, 138, 138, 0.719);
+  justify-content: space-around;
+  background-color: white;
+}
+.toptic .bar div:nth-child(1) {
+  width: 40vw;
+}
+.toptic .items {
+  margin-top: 2rem;
+}
+.toptic .items .item {
+  display: flex;
+  width: 70vw;
+  justify-content: space-around;
+  align-items: center;
+  height: 4.5rem;
+  font-size: 0.8rem;
+  box-shadow: 0 0 10px 1px rgba(138, 138, 138, 0.185);
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.884);
+}
+.toptic .items .item div:nth-child(1) {
+  width: 40vw;
+  font-size: 1.2rem;
+}
+.toptic .items .item div:nth-child(3) {
+  color: rgb(255, 187, 0);
+}
+.toptic .items .item div:nth-child(2),
+.toptic .items .item div:nth-child(4) {
+  color: rgba(138, 138, 138, 0.623);
+}
