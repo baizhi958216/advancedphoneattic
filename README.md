@@ -1,7 +1,5 @@
 # 玩机阁后端
 
-## 前端请切换到[frontend 分支](https://github.com/baizhi958216/advancedphoneattic/tree/frontend)
-
 ## 启动 mongodb 服务(Docker)
 
 ```bash
